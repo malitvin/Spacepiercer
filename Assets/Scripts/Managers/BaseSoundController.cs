@@ -38,6 +38,11 @@ namespace SpacePiercer.Managers
 
     public class BaseSoundController : MonoBehaviour
     {
+        [Header("Background Audio")]
+        public AudioSource mainMenuAudio;
+        public AudioSource gameAudio;
+
+        [Header("Audio Clips")]
         public AudioClip[] GameplaySounds;
         public AudioClip[] UISounds;
         private int totalSounds;

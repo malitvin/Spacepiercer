@@ -11,8 +11,6 @@ namespace SpacePiercer.UI
         public Button launchButton;
         public Button abortButton;
 
-        public AudioSource s;
-
         [Header("HUD Component")]
         public HUD hud;
 
@@ -52,7 +50,8 @@ namespace SpacePiercer.UI
 
         private void BeginGame()
         {
-            s.Play();
+            GameManager.instance.baseSound.mainMenuAudio.enabled = false;
+            GameManager.instance.baseSound.gameAudio.Play();
             GetComponent<FadeChange>().FadeTo(0.0f);
             hud.ShowHUD();
         }

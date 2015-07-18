@@ -4,7 +4,6 @@ using System.Collections;
 
 namespace SpacePiercer.Managers
 {
-
     public class GameController : MonoBehaviour
     {
 
@@ -29,10 +28,18 @@ namespace SpacePiercer.Managers
             set { playerPower = value; }
         }
 
+        private bool playerAlive;
+        public bool PlayerAlive
+        {
+            get { return playerAlive; }
+            set { playerAlive = value; }
+        }
+
         private void Start()
         {
-            playerHealth = 100.0f;
+            playerHealth = 1.0f;
             playerPower = 100.0f;
+            playerAlive = true;
         }
 
         void Update()
@@ -41,6 +48,12 @@ namespace SpacePiercer.Managers
             {
                 gameTime += Time.deltaTime;
             }
+        }
+
+        public IEnumerator EndGame()
+        {
+            yield return new WaitForSeconds(4.0f);
+            Application.LoadLevel(0);
         }
     }
 }

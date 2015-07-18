@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\General\TrashController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Physics\CollisionDetection.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Physics\ExplosionMover.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Physics\Movement.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Physics\TrashMover.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Physics\TrashRotor.cs" />

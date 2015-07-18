@@ -12,10 +12,11 @@ namespace SpacePiercer.Gameplay
         private void Update()
         {
             if (MainMenu.InMainMenu) return;
-            ShipMovement();
+            ShipMovemnet_XboxOne();
+            //ShipMovement_PC();
         }
 
-        private void ShipMovement()
+        private void ShipMovement_PC()
         {
             if (Input.GetKey(KeyCode.LeftArrow)) //moving left
             {
@@ -29,7 +30,7 @@ namespace SpacePiercer.Gameplay
             }
             else //not moving
             {
-                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0f)), 0.1f); 
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0f)), 0.1f);
             }
 
             if (Input.GetKey(KeyCode.DownArrow)) //moving down
@@ -44,9 +45,45 @@ namespace SpacePiercer.Gameplay
             }
             else
             {
-                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0f)), 0.1f); 
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0f)), 0.1f);
             }
 
         }
+        private void ShipMovemnet_XboxOne()
+        {
+            float h = movementSpeed * Input.GetAxis("XboxOne_XAxis") *Time.deltaTime;
+            float v = movementSpeed * Input.GetAxis("XboxOne_YAxis") * Time.deltaTime;
+            if (h < 0.15)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 15f)), 0.1f);
+                transform.position += new Vector3((h), 0, 0);
+            }
+            else if (h > 0)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, -15f)), 0.1f);
+                transform.position += new Vector3(-(h), 0, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0f)), 0.1f);
+            }
+            if (v < 0)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(10, 0, 0)), 0.1f);
+                transform.position += new Vector3(0, (h), 0);
+            }
+            else if (v > 0)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(-10, 0, 0)), 0.1f);
+                transform.position += new Vector3(0, -(h), 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0f)), 0.1f);
+            }
+            Debug.Log(v);
+        }
     }
+
+
 }

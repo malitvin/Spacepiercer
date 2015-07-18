@@ -17,6 +17,11 @@ namespace SpacePiercer.Gameplay
                 GameManager.instance.uiManager.hud.UpdateSlider();
                 Destroy(other.gameObject);
                 StartCoroutine(SpawnExplosion(other.transform.position));
+
+                if (GameManager.instance.gameControl.PlayerHealth <= 0.0f)
+                {
+                    StartCoroutine(GameManager.instance.gameControl.EndGame());                   
+                }
             }
         }
 
