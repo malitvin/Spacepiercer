@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Physics\Movement.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Physics\TrashMover.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Physics\TrashRotor.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Physics\laser.cs" />
      <Compile Include="Assets\Scripts\Managers\BaseSoundController.cs" />
      <Compile Include="Assets\Scripts\Managers\GameController.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
