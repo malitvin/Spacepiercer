@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{60C22E9F-FCED-C1E8-9866-157ECE7606B3}") = "spacepiercer", "Assembly-CSharp.csproj", "{94DE70D8-E96A-FDBF-0FA8-DDA2E94DF7D5}"
+Project("{A7AA46B4-FEAD-A0D0-CD20-E1760F0BD670}") = "Spacepiercer", "Assembly-CSharp.csproj", "{117A6A49-01C7-9065-AE52-E484B50C64D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{94DE70D8-E96A-FDBF-0FA8-DDA2E94DF7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94DE70D8-E96A-FDBF-0FA8-DDA2E94DF7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94DE70D8-E96A-FDBF-0FA8-DDA2E94DF7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94DE70D8-E96A-FDBF-0FA8-DDA2E94DF7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117A6A49-01C7-9065-AE52-E484B50C64D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117A6A49-01C7-9065-AE52-E484B50C64D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117A6A49-01C7-9065-AE52-E484B50C64D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117A6A49-01C7-9065-AE52-E484B50C64D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																					GlobalSection(MonoDevelopProperties) = preSolution
+																																									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

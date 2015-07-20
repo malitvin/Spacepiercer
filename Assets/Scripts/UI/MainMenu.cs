@@ -38,7 +38,7 @@ namespace SpacePiercer.UI
                     launchButton.interactable = false;
                     BeginGame();
                 }
-                if (Input.GetButtonDown("XboxOne_B"))
+                if (Input.GetButtonDown("XboxOne_B") || Input.GetKeyDown(KeyCode.B))
                 {
                     GameManager.instance.baseSound.PlayUISound(0, new Vector3(0, 0, 0), 0.0f);
                     inMainMenu = false;

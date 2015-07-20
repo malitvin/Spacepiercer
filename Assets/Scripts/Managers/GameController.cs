@@ -52,8 +52,10 @@ namespace SpacePiercer.Managers
 
         public IEnumerator EndGame()
         {
-            yield return new WaitForSeconds(4.0f);
-            //Application.LoadLevel(0);
+            playerAlive = false;
+            DataManager.SetHighScore(gameTime);
+            yield return new WaitForSeconds(2.0f);
+            Application.LoadLevel(0);
         }
     }
 }

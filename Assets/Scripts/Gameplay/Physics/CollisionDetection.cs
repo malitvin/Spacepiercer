@@ -9,9 +9,12 @@ namespace SpacePiercer.Gameplay
         [Header("Explosion")]
         public GameObject explosionPrefab;
 
+        [Header("EndExplosion")]
+        public GameObject shipBOOM;
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag == "Trash")
+            if (other.gameObject.tag == "Trash" && GameManager.instance.gameControl.PlayerAlive)
             {
                 GameManager.instance.gameControl.PlayerHealth -= 10.0f;
                 GameManager.instance.uiManager.hud.UpdateSlider();
@@ -20,6 +23,9 @@ namespace SpacePiercer.Gameplay
 
                 if (GameManager.instance.gameControl.PlayerHealth <= 0.0f)
                 {
+                    GameManager.instance.baseSound.PlayGameplaySound(1, new Vector3(0, 0, 0), 0.0f);
+                    shipBOOM.SetActive(true);
+                    GetComponentInParent<Animation>().Play("Death");
                     StartCoroutine(GameManager.instance.gameControl.EndGame());                   
                 }
             }

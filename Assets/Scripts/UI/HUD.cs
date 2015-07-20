@@ -14,12 +14,15 @@ namespace SpacePiercer.UI
 
         [Header("Game Time")]
         public Text gameTime;
+        public Text highScore;
 
-        private FadeChange fade;
+        [Header("GameObjects")]
+        public GameObject inGameHUD;
+        public GameObject menuHUD;
 
         void Start()
         {
-            fade = GetComponent<FadeChange>();
+            highScore.text = "High Score: " + ToString_Time((float)Math.Round(DataManager.GetHighScore(), 2));
         }
 
         private void Update()
@@ -29,7 +32,8 @@ namespace SpacePiercer.UI
 
         public void ShowHUD()
         {
-            fade.FadeTo(1.0f);
+            menuHUD.GetComponent<CanvasGroup>().alpha = 0.0f;
+            inGameHUD.GetComponent<FadeChange>().FadeTo(1.0f);
             AnimateSlider();
         }
 
@@ -66,9 +70,5 @@ namespace SpacePiercer.UI
             return str;
         }
 
-        private void OnDestroy()
-        {
-            fade = null;
-        }
     }
 }
