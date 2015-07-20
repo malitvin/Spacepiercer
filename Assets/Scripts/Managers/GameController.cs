@@ -37,7 +37,7 @@ namespace SpacePiercer.Managers
 
         private void Start()
         {
-            playerHealth = 1.0f;
+            playerHealth = 100.0f;
             playerPower = 100.0f;
             playerAlive = true;
         }
@@ -53,7 +53,7 @@ namespace SpacePiercer.Managers
         public IEnumerator EndGame()
         {
             yield return new WaitForSeconds(4.0f);
-            Application.LoadLevel(0);
+            //Application.LoadLevel(0);
         }
     }
 }

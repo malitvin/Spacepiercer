@@ -12,8 +12,8 @@ namespace SpacePiercer.Gameplay
         private void Update()
         {
             if (MainMenu.InMainMenu) return;
-            ShipMovemnet_XboxOne();
-            //ShipMovement_PC();
+            //ShipMovemnet_XboxOne();
+            ShipMovement_PC();
         }
 
         private void ShipMovement_PC()

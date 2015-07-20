@@ -344,6 +344,41 @@ Transform:
   - {fileID: 48382831}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &700571505 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 196186, guid: 75e2a0c8d0f0c47a4b2eebff37b0ae73, type: 2}
+  m_PrefabInternal: {fileID: 1369519615}
+--- !u!215 &700571512
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 700571505}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 1
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_Importance: 1
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: .300000012
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1001 &1263747617
 Prefab:
   m_ObjectHideFlags: 0
@@ -597,6 +632,14 @@ Prefab:
     - target: {fileID: 22485472, guid: 75e2a0c8d0f0c47a4b2eebff37b0ae73, type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453718, guid: 75e2a0c8d0f0c47a4b2eebff37b0ae73, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.00999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 453718, guid: 75e2a0c8d0f0c47a4b2eebff37b0ae73, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.98000002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75e2a0c8d0f0c47a4b2eebff37b0ae73, type: 2}
