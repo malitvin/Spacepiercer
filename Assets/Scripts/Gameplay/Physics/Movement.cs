@@ -8,16 +8,19 @@ namespace SpacePiercer.Gameplay
     {
         [Header("Ship Speed")]
         public float movementSpeed;
-
+		public GameObject Laser;
         private void Update()
         {
             if (MainMenu.InMainMenu) return;
             //ShipMovemnet_XboxOne();
+			Shoot();
             ShipMovement_PC();
+			
         }
 
         private void ShipMovement_PC()
         {
+			//Moving
             if (Input.GetKey(KeyCode.LeftArrow)) //moving left
             {
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 15f)), 0.1f);
@@ -47,8 +50,8 @@ namespace SpacePiercer.Gameplay
             {
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0f)), 0.1f);
             }
-
         }
+
         private void ShipMovemnet_XboxOne()
         {
             float h = movementSpeed * Input.GetAxis("XboxOne_XAxis") *Time.deltaTime;
@@ -83,6 +86,14 @@ namespace SpacePiercer.Gameplay
             }
             Debug.Log(v);
         }
+		
+		private void Shoot(){
+			//Firing
+			
+			if (Input.GetButtonDown("Fire1")){
+				Instantiate(Laser,transform.position,Quaternion.identity);
+			}
+		}
     }
 
 
